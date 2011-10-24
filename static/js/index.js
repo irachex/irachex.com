@@ -8,10 +8,13 @@ function init() {
     else {
         page = "home";
     }
+    var offset = $("#menu div.active").offset();
+    $("#menu_arrow").css("left", offset.left+$("#menu div").width()-20);
+    
     changePage(page);
     
     $("#menu div").click(function() {
-        page = $("a", this).html().toLowerCase();
+        page = $("span", this).html().toLowerCase();
         changePage(page);
     });
 }
@@ -20,7 +23,6 @@ function changeMenu(page) {
     $("div.active").removeClass("active");
     $("div.menu_"+page).addClass("active");
     var offset = $("#menu div.active").offset();
-    $("#menu_arrow").css("left",offset.left+$("#menu div").width()-20);
     $("#menu_arrow").animate({"top":offset.top+$("#menu div").height()/2-10}, 200);
 }
 
@@ -95,7 +97,7 @@ $(document).ready(function() {
 
 $(window).load(function() {
     hideLoading();
-    $("#container").show();
+    $("#container").fadeIn(500);
     init();
     
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");  

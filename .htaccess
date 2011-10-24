@@ -1,0 +1,25 @@
+AddHandler python-program .py
+PythonHandler modpython_gateway::handler
+PythonOption wsgi.application handler::main
+PythonPath "['/home/u114006/lib/'] + ['/home/u114006/'] + sys.path"
+PythonDebug On
+
+DirectoryIndex handler.py/ index.php index.html index.htm
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !^/(static|comet|resume|contact|fetch)
+  RewriteCond %{REQUEST_URI} !^/favicon.ico$
+  RewriteCond %{REQUEST_URI} !^(/.*)+handler.py/
+  RewriteRule ^(.*)$ handler.py/$1 [PT]
+</IfModule>
+
+ExpiresActive on
+ExpiresByType text/css M78844000
+ExpiresByType text/javascript M78844000
+ExpiresByType image/gif M78844000
+ExpiresByType image/jpeg M78844000
+ExpiresByType image/png M78844000
+ExpiresByType application/x-javascript M78844000

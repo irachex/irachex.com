@@ -4,18 +4,10 @@
     </script>
 </canvas>
 
-<div id="control">
-    <a class="btn_save" href="javascript:void(0)">save</a> 
-    <br/>
-    <div class="btn_width" href="javascript:void(0)">
-        width
-    <select id="width_slider">
-        <option value="1">1</option>
-        <option value="10" selected="selected">10</option>
-        <option value="30">30</option>
-        <option value="50">50</option>
-        <option value="100">100</option>
-    </select>
+<div id="control" class="movein_anim">
+    <div class="btn_save">save</div> 
+    <div id="slider">
+       <input type="range" value="10" min="5" max="100" step="5" id="width_slider"/>
     </div>
     <div id="now_color"></div>
     <div id="color_board">
@@ -31,6 +23,8 @@
         <div class="btn_color white" alt="white"></div>
     </div>
 </div>
+<div id="now_width">10</div>
+
 <script type="text/javascript">
     init_wall();
     init_control();
