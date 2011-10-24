@@ -1,0 +1,38 @@
+<canvas id="wall" width="650px" height="480px">
+    <script type="text/javascript">
+        window.location.herf="index.php";
+    </script>
+</canvas>
+
+<div id="control">
+    <a class="btn_save" href="javascript:void(0)">save</a> 
+    <br/>
+    <div class="btn_width" href="javascript:void(0)">
+        width
+    <select id="width_slider">
+        <option value="1">1</option>
+        <option value="10" selected="selected">10</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    </div>
+    <div id="now_color"></div>
+    <div id="color_board">
+        <div class="btn_color purple" alt="purple"></div>
+        <div class="btn_color blue" alt="blue"></div>
+        <div class="btn_color green" alt="green"></div>
+        <div class="btn_color yellow" alt="yellow"></div>
+        <div class="btn_color orange" alt="orange"></div>
+        <div class="btn_color pink" alt="pink"></div>
+        <div class="btn_color red" alt="red"></div>
+        <div class="btn_color black" alt="black"></div>
+        <div class="btn_color gray" alt="gray"></div>
+        <div class="btn_color white" alt="white"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    init_wall();
+    init_control();
+    showTip("Everyone can change this page, show your imaginations!", 2000);
+</script>
