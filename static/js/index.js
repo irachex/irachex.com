@@ -8,8 +8,8 @@ function init() {
     else {
         page = "home";
     }
-    var offset = $("#menu div.active").offset();
-    $("#menu_arrow").css("left", offset.left+$("#menu div").width()-20);
+    var offset = $("#content").offset();
+    $("#menu_arrow").css("left", offset.left-20);
     
     changePage(page);
     
@@ -40,15 +40,14 @@ function changePage(page) {
     $.ajax({
         url : "/"+page,
         success: function(content) {
-            $("#content").html(content);
+            $("#content").html(content).fadeIn(100);
         }
     });
 }
 
 function showTip(text, timeout) {
     var offset = $("#content").offset();
-    $("#tip").html(text);
-    $("#tip").css({
+    $("#tip").html(text).css({
         "top": offset.top + 480/2 - $("#tip").height() - 50,
         "left": offset.left + 650/2 - $("#tip").width()/2
     }).fadeIn(300);

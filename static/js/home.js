@@ -23,7 +23,7 @@ function init_control() {
     $("#control").css({
         "top": offset.top+25,
         "left": offset.left + 650 + 10
-    }).fadeIn(300);
+    });
     $(".btn_color").click(function() {
         var color = $(this).css("background-color");
         wall.doodle("setColor", color);

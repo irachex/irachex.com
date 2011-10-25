@@ -147,14 +147,14 @@ body {
         background-image: url("../img/blog.png");
     }
     #menu_arrow {
-        height:0;
-        width:0;
+        height:0px;
+        width:0px;
+        text-align:right;
         border: 10px solid;
         border-color: transparent #fff transparent transparent;
-        z-index:1;
-        position: absolute;
+        z-index:101;
+        position:absolute;
         top: 221px;
-        left: 368px;
     }
     
 /*=================== content ======================*/
@@ -177,6 +177,10 @@ body {
     color: #333;
     font-size: 1em;
     text-shadow: 0px 1px 1px #ccc;
+    
+    border-radius: 0 10px 10px 0; 
+    -webkit-border-radius: 0 10px 10px 0; 
+    -mozilla-border-radius: 0 10px 10px 0;
 }
 #content a {
     color: #0C7823;       
@@ -197,10 +201,8 @@ z-index:20;
 border-radius: 0 10px 10px 0; 
 -webkit-border-radius: 0 10px 10px 0; 
 -mozilla-border-radius: 0 10px 10px 0; 
-
 }
 #control { 
-    display:none;
     width: 36px;
     text-align:center;
     padding:5px;
@@ -235,7 +237,7 @@ border-radius: 0 10px 10px 0;
     -webkit-animation-duration: 0.5s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-direction: normal;
-    -webkit-animation-timing-function: ease-in-out	;
+    -webkit-animation-timing-function: ease-in-out;
 }
 .btn_save {
     color: #fff;
@@ -295,14 +297,14 @@ border-radius: 0 10px 10px 0;
 }
 
 input#width_slider::-webkit-slider-thumb{
-    width: 10px;
-    height: 10px; 
-    background:blue;
-    border: 1px solid #000;
-    -webkit-box-shadow: 0 0 6px #000;
-    -webkit-border-radius: 14px;
-    -webkit-appearance: none !important;
-  }
+width: 10px;
+height: 10px;
+background:-webkit-gradient(radial,0 0,0,0 0,14,from(#999),to(#ccc),color-stop(80%,#ccc));
+border: 1px solid #ccc;
+-webkit-box-shadow: 0 0 6px #000;
+-webkit-border-radius: 10px;
+-webkit-appearance: none !important;
+}
 
 #now_color { width: 30px; height: 25px; background-color: black;  margin-left:auto; margin-right:auto;
 border-radius: 1px;

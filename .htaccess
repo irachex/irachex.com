@@ -17,8 +17,8 @@ DirectoryIndex handler.py/ index.php index.html index.htm
 </IfModule>
 
 ExpiresActive on
-ExpiresByType text/css M78844000
-ExpiresByType text/javascript M78844000
+ExpiresByType text/css M3600
+ExpiresByType text/javascript M3600
 ExpiresByType image/gif M78844000
 ExpiresByType image/jpeg M78844000
 ExpiresByType image/png M78844000
